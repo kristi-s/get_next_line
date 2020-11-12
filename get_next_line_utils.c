@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "get_next_line.h"
 
 int				ft_memsearch(char *mem)
@@ -25,12 +26,18 @@ int				ft_memsearch(char *mem)
 	return (0);
 }
 
-int				ft_free(char *mem)
+int				ft_free(char *mem1, char *mem2)
 {
-	if (mem != NULL)
+//	printf("ft_free\n");/// del--------------!!!!!!!!!!
+	if (mem1 != NULL)
 	{
-		free(mem);
-		mem = NULL;
+		free(mem1);
+		mem1 = NULL;
+	}
+	if (mem2 != NULL)
+	{
+		free(mem2);
+		mem2 = NULL;
 	}
 	return (-1);
 }
@@ -49,8 +56,8 @@ size_t			ft_strlen(char *s)
 	}
 	return (len);
 }
-/*-----------------------------------------------
-/* ft_strjoin free s1!
+/*------------------------------------------------*/
+/* ft_strjoin free s1!							 */
 /*----------------------------------------------*/
 
 char            *ft_strjoin(char *s1, char *s2)
@@ -59,6 +66,7 @@ char            *ft_strjoin(char *s1, char *s2)
     char        *ptr_str;
     char        *str;
 
+//	printf("ft_strjoin s1 = %s, s2 = %s\n", s1, s2);/// del--------------!!!!!!!!!!
     if (!s1 && !s2)
         return (0);
     len = ft_strlen(s1) + ft_strlen(s2);
@@ -71,7 +79,7 @@ char            *ft_strjoin(char *s1, char *s2)
         s1++;
         ptr_str++;
     }
-    ft_free(s1 - (len - ft_strlen(s2)));
+    ft_free(s1 - (len - ft_strlen(s2)), 0);
     while (s2 && *s2)
     {
         *ptr_str = *s2;
