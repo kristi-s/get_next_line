@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 19:28:46 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/12 23:40:26 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/13 15:42:53 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
-/*# define BUFFER_SIZE 32*/
 
 int			get_next_line(int fd, char **line);
 int			ft_memsearch(char *mem);

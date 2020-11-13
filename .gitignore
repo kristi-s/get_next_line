@@ -54,3 +54,5 @@ dkms.conf
 file1
 file2
 a.out
+.DS_Store
+get_nl

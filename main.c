@@ -21,12 +21,13 @@ int main(int argc, char **argv)
 //	fd = 0;
 	while (get_next_line(fd, &line))
 	{
-		printf("%s", line);
+		printf("%s\n", line);
 		free(line);
 		line = NULL;
 	}
+	printf("%s\n", line);
 	free(line);
-		line = NULL;
+	line = NULL;
 
 
 	if ((n = close(fd)) == -1)

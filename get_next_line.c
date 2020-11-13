@@ -6,7 +6,7 @@
 /*   By: droslyn <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/10 19:26:31 by droslyn           #+#    #+#             */
-/*   Updated: 2020/11/12 23:30:58 by droslyn          ###   ########.fr       */
+/*   Updated: 2020/11/13 15:00:29 by droslyn          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ char			*ft_get_line(char *str)
 	size_t		len;
 	char		*new_str;
 
-//	printf("ft_get_line\n");/// del--------------!!!!!!!!!!
 	len = 0;
 	while (str[len] != '\n' && str[len] != '\0')
 		len++;

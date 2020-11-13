@@ -8,7 +8,7 @@ CC = gcc
 
 RM = rm -f
 
-CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror -D BUFFER_SIZE=32
 
 .c.o:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
