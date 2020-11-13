@@ -19,13 +19,16 @@ int main(int argc, char **argv)
 		return 0;
 	}
 //	fd = 0;
-	while (get_next_line(fd, &line))
+	int j = 0;
+	while ((j = get_next_line(fd, &line)) > 0)
 	{
 		printf("%s\n", line);
+		printf("j = %d\n", j);
 		free(line);
 		line = NULL;
 	}
 	printf("%s\n", line);
+	printf("j = %d\n", j);
 	free(line);
 	line = NULL;
 
